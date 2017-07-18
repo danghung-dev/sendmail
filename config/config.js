@@ -43,7 +43,7 @@ const config = {
     service: 'gmail',
     user: 'miwasoft.com@gmail.com',
     name: 'MiwaSoft',
-    password: 'viethung2',
+    password: 'miwasoft123',
     host: 'smtp.gmail.com',
     port: 587,
   }
