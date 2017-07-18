@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import path from 'path'
+import fs from 'fs'
 import config from '../../config/config'
 
 const EmailTemplate = require('email-templates').EmailTemplate
@@ -49,6 +50,7 @@ function send(mailObject) {
     if (error) {
       return console.log('there was an error while trying render', error)
     }
+    fs.appendFileSync('output/email.html', results.html)
     transport.sendMail({
       from: mailObject.from ? mailObject.from : 'MiwaSoft <miwasoft@gmail.com>',
       to: mailObject.to,
